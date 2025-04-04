@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Typing animation for AI assistant */
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #666;
+  color: #666;
+  box-shadow: 9984px 0 0 0 #666, 9994px 0 0 0 #666, 10004px 0 0 0 #666;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+  0% {
+    box-shadow: 9984px 0 0 0 #666, 9994px 0 0 0 #666, 10004px 0 0 0 #666;
+  }
+  16.667% {
+    box-shadow: 9984px -5px 0 0 #666, 9994px 0 0 0 #666, 10004px 0 0 0 #666;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #666, 9994px 0 0 0 #666, 10004px 0 0 0 #666;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #666, 9994px -5px 0 0 #666, 10004px 0 0 0 #666;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #666, 9994px 0 0 0 #666, 10004px 0 0 0 #666;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #666, 9994px 0 0 0 #666, 10004px -5px 0 0 #666;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #666, 9994px 0 0 0 #666, 10004px 0 0 0 #666;
+  }
+}
